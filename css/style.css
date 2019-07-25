@@ -1,0 +1,134 @@
+*{margin:0; padding:0;}			
+ul,li,p,dl,dt,dd,ol,h1,h2,h3,h4,h5,h6,form,label,header,footer,nav,section,aside,dialog,
+figure,figure,figcaption,hgroup,article{display: block;}
+ul{list-style:none}
+.clearfix:after{display:block; height:0; clear:both; content:''; visibility:hidden;}
+a{text-decoration:none;}
+body{font-family: "microsoft yahei";}
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+h1{
+	width: 100%;
+	text-align: center;
+	font-size: 50px;
+	z-index: 99;
+	position: fixed;
+	top: 50px;
+	left: 0;
+	color: honeydew;
+}
+.nav{
+	position: fixed;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 200px;
+	padding-top: 50px;
+	z-index: 9999;
+}
+.nav li{
+	text-align: center;
+	margin: 20px 0;
+	padding: 5px;
+	background: aqua;
+	border-radius: 10px;
+}
+.nav li a{
+	color: white;
+	font-size: 18px;
+}
+
+
+/*签到*/
+.qd{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px 10px;
+	box-sizing: border-box;
+}
+.qd li{
+	width: 20%;
+	padding: 5px;
+	box-sizing: border-box;
+}
+.qd li img{
+	max-width: 100%;
+}
+
+/*小象首页星星特效*/
+.ball {
+	color: #FF0000;
+	position: absolute;
+	font-size: 16px;
+	overflow: hidden;
+}
+.star {
+	color: #FF0000;
+	position: absolute;
+	font-size: 4px;
+	overflow: hidden;
+}
+
+/*入场动画*/
+.loading-box{
+    height: 50vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 10000;
+    background-color: #0a94ff;
+}
+
+#loading .loading-top{
+        top: 0;
+}
+#loading .loading-bottom{
+        bottom: 0;
+}
+#loading .loading-middle{
+        position: fixed;
+        left: 0;
+        z-index: 10001;
+        width: 100%;
+        height: 0;
+        background-color: #FFF;
+        top: 50%;
+        transform: translateY(-50%);
+}
+
+.loading-middle-animate{
+    animation: loading-middle .5s ease-in;
+}
+@keyframes loading-middle{
+    0%{width: 0; transform: scaleX(1); height: 10px;}
+    99%{width: 100%; transform: scaleX(1); height: 10px;}
+    100%{width: 100%; transform: scaleX(0); height: 0;}
+}
+.loading-top-animate{
+    animation: loading-top .5s .5s ease-in forwards;
+}
+@keyframes loading-top{
+    0%{height: 50vh;}
+    100%{height: 0;}
+}
+.loading-bottom-animate{
+    animation: loading-bottom .5s .5s ease-in forwards;
+}
+@keyframes loading-bottom{
+    0%{height: 50vh;}
+    100%{height: 0;}
+}
